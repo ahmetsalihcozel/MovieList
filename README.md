@@ -1,70 +1,30 @@
-# Getting Started with Create React App
+# Proje Hakkında:
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Proje, bir film listesi uygulamasıdır. Kullanıcılar film arayabilir, film ekleyebilir veya film silebilir. Proje aşağıdaki bileşenlerden oluşur:
 
-## Available Scripts
+## AddMovie:
 
-In the project directory, you can run:
+ Bu bileşen, kullanıcının yeni bir film eklemesine izin verir. Bir form oluşturur ve form verilerini bir FormData nesnesine dönüştürür. Ardından axios kütüphanesini kullanarak verileri bir API’ye gönderir ve sayfayı yeniler. <br>
 
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## AddMovieApp:<br>
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Bu bileşen, AddMovie bileşenini döndürür. AddMovie bileşenine bir onAddMovie prop’u geçirir. <br>
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## App:<br>
 
-### `npm run build`
+ Bu bileşen, uygulamanın ana bileşenidir. movies ve moviesStatic adında iki state değişkeni tutar. componentDidMount metodu ile axios kütüphanesini kullanarak iki API’den film 
+ verilerini alır ve state’i günceller. deleteMovie metodu ile bir filmi state’ten siler. filterMovie metodu ile bir arama metnine göre filmleri filtreler. SearchBar ve MovieList bileşenlerini döndürür. <br>
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## MovieList:<br>
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+ Bu bileşen, filmlerin bir listesini gösterir. props olarak movies ve movieDelFunc alır. movies dizisini map metodu ile Video bileşenlerine dönüştürür ve her birine key ve video prop’ları geçirir. <br>
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## SearchBar:<br>
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+ Bu bileşen, kullanıcının filmleri aramasına izin verir. state olarak searchQuery adında bir değişken tutar. onChange olayı ile state’i günceller ve props olarak aldığı movieFilterFunc fonksiyonunu çağırır. Ayrıca bir Add Movie butonu oluşturur ve onClick olayı ile sayfayı /add adresine yönlendirir. <br>
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Bu proje React kütüphanesinin temel kavramlarını kullanır: JSX, state, props, olaylar, yaşam döngüsü metotları ve fonksiyonel bileşenler. React projelerinin yapısını iyileştirmek için daha ileri düzey konseptler de kullanılabilir: React Context, React Router, React Hooks gibi.
