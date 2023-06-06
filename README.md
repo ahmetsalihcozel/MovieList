@@ -11,6 +11,7 @@ Proje, bir film listesi uygulamasıdır. Kullanıcılar film arayabilir, film ek
 
 Bu bileşen, AddMovie bileşenini döndürür. AddMovie bileşenine bir onAddMovie prop’u geçirir. <br>
 
+![ Alt text](./gifs/addmovie.gif) 
 
 ## App:<br>
 
@@ -22,9 +23,12 @@ Bu bileşen, AddMovie bileşenini döndürür. AddMovie bileşenine bir onAddMov
 
  Bu bileşen, filmlerin bir listesini gösterir. props olarak movies ve movieDelFunc alır. movies dizisini map metodu ile Video bileşenlerine dönüştürür ve her birine key ve video prop’ları geçirir. <br>
 
+ ![ Alt text](./gifs/delmovie.gif) 
 
 ## SearchBar:<br>
 
  Bu bileşen, kullanıcının filmleri aramasına izin verir. state olarak searchQuery adında bir değişken tutar. onChange olayı ile state’i günceller ve props olarak aldığı movieFilterFunc fonksiyonunu çağırır. Ayrıca bir Add Movie butonu oluşturur ve onClick olayı ile sayfayı /add adresine yönlendirir. <br>
+
+ ![ Alt text](./gifs/searchbar.gif) 
 
 Bu proje React kütüphanesinin temel kavramlarını kullanır: JSX, state, props, olaylar, yaşam döngüsü metotları ve fonksiyonel bileşenler. React projelerinin yapısını iyileştirmek için daha ileri düzey konseptler de kullanılabilir: React Context, React Router, React Hooks gibi.
